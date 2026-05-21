@@ -59,7 +59,7 @@ O Contrato Semântico (mapeado por meio de ferramentas de saída estruturada com
 
 Deve ser disponibilizada uma API (REST/JSON) com endpoints claros que permitam filtrar as informações por empresa e período (ex: GET /api/conjuntura?empresa=MRV&ano=2025&trimestre=3).
 
-### Como coletar os dados?
+## Como coletar os dados?
 
 
 O caminho mais rápido não é tentar navegar pelo site comercial da empresa (onde ela vende apartamentos). Eles devem ir direto aos buscadores (Google, DuckDuckGo, etc.) e digitar:
@@ -77,20 +77,20 @@ Uma vez dentro do portal de RI de uma construtora (como Plano & Plano, Cury, Pac
 
 Dentro da Central de Resultados, haverá uma tabela ou lista organizada por Ano (ex: 2025, 2026) e Trimestre (1T, 2T, 3T, 4T). As empresas costumam publicar vários arquivos por trimestre, mas para o escopo do desafio buscar pela Prévia Operacional (documento lançado logo após o fim do trimestre com dados brutos de obras/vendas).
 
-### Boletim Conjuntura
+## Boletim Conjuntura
 
 O boletim de exemplo para extrair os dados está em:
 
-[Boletim de Conjuntura 2025 3T]()
+[Boletim de Conjuntura 2025 3T](https://github.com/unb-Sistemas-de-Machine-learning/Projetos-Individuais-2026-1/blob/main/projeto-individual-4/exemplo_Boletim_Conjuntura_2025_3T.pdf)
 
-### Componentes Obrigatórios da Solução
+## Componentes Obrigatórios da Solução
 O pipeline construído pelos grupos deve conter rigorosamente três camadas arquiteturais:
 
 - Camada de Extração de Dados: Implementação do motor que faz o parsing do PDF e extrai os valores brutos. Os alunos deverão escolher de forma justificada entre uma estratégia Full-Scan (enviar a página inteira) ou baseada em Chunking/RAG (segmentar o PDF e recuperar só os trechos das tabelas).
 - Contrato Semântico dos Dados: Definição das regras de negócio e validação de dados passadas à IA. O prompt do sistema deve blindar o banco, forçando o LLM a responder exatamente os tipos certos e tratar valores ausentes como NULL.
 - Catálogo de Dados e Linhagem: O repositório deve registrar a linhagem exata do dado (data lineage), associando cada linha do banco ao link do PDF original coletado na central de resultados.
 
-### Critérios de Avaliação
+## Critérios de Avaliação
 
 O foco da avaliação será a robustez da arquitetura proposta para resolver a variabilidade dos PDFs. Não será avaliada a interface gráfica. Serão avaliados:
 
@@ -99,7 +99,7 @@ O foco da avaliação será a robustez da arquitetura proposta para resolver a v
 - Extração de Valores Absolutos: A capacidade do LLM de ignorar as porcentagens de variação destacadas pelo marketing de RI e extrair os valores brutos para que o banco calcule o histórico real.
 - Modelagem Temporal e API: Consistência no salvamento dos trimestres e clareza dos contratos da API gerada.
 
-### Como submeter
+## Como submeter
 
 Data limite de entrega: 08.06
 
