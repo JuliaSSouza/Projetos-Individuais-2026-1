@@ -1,0 +1,9 @@
+sources:
+  - company: EXEMPLO
+    url: file:///Users/juliasantanna/Downloads/exemplo_Boletim_Conjuntura_2025_3T%20(1).pdf
+    kind: pdf
+    year: 2025
+    quarter: 3
+  - company: MRV
+    url: https://ri.mrv.com.br/
+    kind: results_page
